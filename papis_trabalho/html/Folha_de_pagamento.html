@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta name="description" content="Sistema de apoio às atividades contábeis">
+        <title>Folha de pagamento | Papis</title>
+        <link rel="stylesheet" href="../css/style.css">
+    </head>
+    <body>
+
+        <header class="topbar">
+            <a class="brand" href="Index.html">TRABALHO DO <span>PAPIS</span></a>
+            <div class="user-tools">
+                <small>Bem-vindo, <b data-user>usuário</b></small>
+                <button onclick="logout()">Sair</button>
+            </div>
+        </header>
+
+        <nav class="nav">
+            <a href="Index.html">Início</a>
+            <a href="Apresentacao.html">Apresentação</a>
+            <a href="Documentos.html">Documentos</a>
+            <a href="Contratos.html">Contratos</a>
+            <a href="Folha_de_pagamento.html">Folha de pagamento</a>
+            <a href="Tributos.html">Tributos</a>
+            <a href="Pareceres.html">Pareceres</a>
+        </nav>
+
+        <main class="container">
+
+            <section class="page-head">
+                <h1>Folha de pagamento</h1>
+                <p>Cadastro de funcionários e registro simplificado de itens de folha, seguindo as entidades funcionário, folha_pagamento e item_folha.</p>
+            </section>
+
+            <section class="panel">
+                <h2>Cadastrar funcionário</h2>
+                <form id="funcForm" class="form-grid">
+                    <div class="field">
+                        <label>CPF *</label>
+                        <input id="fCpf" required placeholder="Somente números"></div>
+                    <div class="field">
+                        <label>Nome *</label>
+                        <input id="fNome" required>
+                    </div>
+                    <div class="field">
+                        <label>Cargo *</label>
+                        <input id="fCargo" required>
+                    </div>
+                    <div class="field">
+                        <label>Salário-base (R$) *</label>
+                        <input id="fSalario" type="number" min="0" step="0.01" required>
+                    </div>
+                    <div class="field full">
+                        <button class="button">Cadastrar funcionário</button>
+                    </div>
+                </form>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                            <th>CPF</th>
+                            <th>Nome</th>
+                            <th>Cargo</th>
+                            <th>Salário-base</th>
+                            <th>Ação</th>
+                            </tr>
+                        </thead>
+                        <tbody data-table="funcionarios"></tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="panel">
+                <h2>Registrar folha de pagamento</h2>
+                <form id="folhaForm" class="form-grid">
+                    <div class="field">
+                        <label>Competência *</label>
+                        <input id="flComp" type="month" required>
+                    </div>
+                    <div class="field">
+                        <label>Funcionário *</label>
+                        <input id="flFuncionario" required placeholder="Nome do funcionário">
+                    </div>
+                    <div class="field">
+                        <label>Salário bruto (R$) *</label>
+                        <input id="flBruto" type="number" min="0" step="0.01" required>
+                    </div>
+                    <div class="field">
+                        <label>Descontos (R$) *</label>
+                        <input id="flDescontos" type="number" min="0" step="0.01" required>
+                    </div>
+                <div class="field full">
+                    <button class="button">Calcular e salvar folha</button>
+                </div>
+            </form>
+            <p class="muted">O sistema calcula salário líquido como salário bruto menos descontos informados. Não aplica automaticamente INSS, IRRF ou outras regras legais.</p>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Competência</th>
+                            <th>Funcionário</th>
+                            <th>Bruto</th>
+                            <th>Descontos</th>
+                            <th>Líquido</th>
+                            <th>Ação</th>
+                        </tr>
+                    </thead>
+                    <tbody data-table="folhas"></tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">Trabalho do Papis · Projeto acadêmico em desenvolvimento</footer>
+    <script src="../js/app.js"></script>
+    
+</body>
+</html>

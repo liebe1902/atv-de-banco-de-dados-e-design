@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta name="description" content="Sistema de apoio às atividades contábeis">
+        <title>Pareceres | Papis</title>
+        <link rel="stylesheet" href="../css/style.css">
+    </head>
+
+    <body>
+
+        <header class="topbar">
+            <a class="brand" href="Index.html">TRABALHO DO <span>PAPIS</span></a>
+            <div class="user-tools">
+                <small>Bem-vindo, <b data-user>usuário</b></small><button onclick="logout()">Sair</button>
+            </div>
+        </header>
+
+        <nav class="nav">
+            <a href="Index.html">Início</a>
+            <a href="Apresentacao.html">Apresentação</a>
+            <a href="Documentos.html">Documentos</a>
+            <a href="Contratos.html">Contratos</a>
+            <a href="Folha_de_pagamento.html">Folha de pagamento</a>
+            <a href="Tributos.html">Tributos</a>
+            <a href="Pareceres.html">Pareceres</a>
+        </nav>
+
+        <main class="container">
+
+            <section class="page-head">
+                <h1>Pareceres técnicos contábeis</h1>
+                <p>Registro de pareceres, com número, título, data de elaboração e conteúdo.</p>
+            </section>
+
+            <section class="panel">
+                <h2>Novo parecer</h2>
+                <form id="parecerForm" class="form-grid">
+                <div class="field">
+                    <label>Número *</label>
+                    <input id="pNumero" required placeholder="Ex.: Parecer Contábil nº 014/2026">
+                </div>
+                <div class="field">
+                    <label>Título *</label>
+                    <input id="pTitulo" required>
+                </div>
+                <div class="field">
+                    <label>Data de elaboração *</label>
+                    <input id="pData" type="date" required></div>
+                <div class="field full">
+                    <label>Conteúdo / análise *</label>
+                    <textarea id="pConteudo" required placeholder="Descreva objeto, fundamentação, análise, memória de cálculo e conclusão..."></textarea>
+                </div>
+                <div class="field full">
+                    <button class="button">Salvar parecer</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="panel">
+            <h2>Pareceres cadastrados</h2>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Número</th>
+                            <th>Título</th>
+                            <th>Data</th>
+                            <th>Conteúdo</th>
+                            <th>Ação</th>
+                        </tr>
+                    </thead>
+                    <tbody data-table="pareceres"></tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">Trabalho do Papis · Projeto acadêmico em desenvolvimento</footer>
+    <script src="../js/app.js"></script>
+    
+</body>
+</html>

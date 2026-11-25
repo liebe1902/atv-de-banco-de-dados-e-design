@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta name="description" content="Sistema de apoio às atividades contábeis">
+        <title>Início | Papis</title>
+        <link rel="stylesheet" href="../css/style.css">
+    </head>
+    <body>
+
+        <header class="topbar">
+            <a class="brand" href="Index.html">TRABALHO DO <span>PAPIS</span></a>
+            <div class="user-tools">
+                <small>Bem-vindo, <b data-user>usuário</b></small><button onclick="logout()">Sair</button>
+            </div>
+        </header>
+
+        <nav class="nav">
+            <a href="Index.html">Início</a>
+            <a href="Apresentacao.html">Apresentação</a>
+            <a href="Documentos.html">Documentos</a>
+            <a href="Contratos.html">Contratos</a>
+            <a href="Folha_de_pagamento.html">Folha de pagamento</a>
+            <a href="Tributos.html">Tributos</a>
+            <a href="Pareceres.html">Pareceres</a>
+        </nav>
+
+        <main class="container">
+
+            <section class="hero">
+                <div>
+                    <span class="tag">Sistema de apoio contábil</span>
+                    <h1>Organização e apoio às atividades contábeis.</h1>
+                    <p>Um ambiente para organizar documentos, contratos, folhas de pagamento, tributos e pareceres técnicos da administração pública municipal.</p>
+                    <a class="button secondary" href="Documentos.html">Acessar ferramentas</a>
+                </div>
+                <img src="../img/imagem_pai.jpeg" alt="Imagem de apresentação do projeto">
+            </section>
+
+            <h2>Painel de atividades</h2>
+            <section class="grid">
+                <article class="card">
+                    <h3>Documentos</h3>
+                    <div class="stats" data-count="documentos">0</div>
+                    <p>Registros cadastrados</p>
+                    <a href="Documentos.html">Abrir documentos</a>
+                </article>
+                <article class="card">
+                    <h3>Contratos</h3>
+                    <div class="stats" data-count="contratos">0</div>
+                    <p>Registros cadastrados</p>
+                    <a href="Contratos.html">Abrir contratos</a>
+                </article>
+                <article class="card">
+                    <h3>Funcionários</h3>
+                    <div class="stats" data-count="funcionarios">0</div>
+                    <p>Registros cadastrados</p>
+                    <a href="Folha_de_pagamento.html">Abrir folha</a>
+                </article>
+                <article class="card">
+                    <h3>Pareceres</h3>
+                    <div class="stats" data-count="pareceres">0</div>
+                    <p>Registros cadastrados</p>
+                    <a href="Pareceres.html">Abrir pareceres</a>
+                </article>
+            </section>
+
+            <div class="notice">Os registros são armazenados no navegador utilizado. Faça cópias das informações importantes; limpar os dados do navegador pode apagá-las.</div>
+        </main>
+
+        <footer class="footer">Trabalho do Papis · Projeto acadêmico em desenvolvimento</footer>
+        <script src="../js/app.js"></script>
+        
+    </body>
+</html>

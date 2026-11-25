@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>Entrar | Papis</title><link rel="stylesheet" href="../css/style.css">
+    </head>
+
+    <body class="login-page" data-auth="true">
+
+        <main class="login-box">
+            
+            <div class="brandmark">TRABALHO DO <span>PAPIS</span></div>
+            <h1>Acesse sua conta</h1>
+            <p class="muted">Entre para utilizar as ferramentas contábeis.</p>
+            <form id="loginForm">
+                <div class="field">
+                    <label for="email">E-mail</label>
+                    <input id="email" type="email" placeholder="seu@email.com" required>
+                </div>
+                <div class="field">
+                    <label for="senha">Senha</label>
+                    <input id="senha" type="password" placeholder="Digite sua senha" required>
+                </div>
+                <button class="button" type="submit">Entrar</button>
+                <p id="erro" role="alert" style="color:#a83d3d"></p>
+            </form>
+
+            <div class="notice">
+                <b>Acesso demonstrativo</b>
+                <br>E-mail: admin@papis.com
+                <br>Senha: papis123</div>
+            <p class="login-note">Este login é apenas demonstrativo e utiliza armazenamento local do navegador. Não utilize dados reais ou confidenciais.</p>
+    
+        </main>
+
+        <script src="../js/auth.js"></script>
+
+    </body>
+</html>

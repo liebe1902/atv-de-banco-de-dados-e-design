@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta name="description" content="Sistema de apoio às atividades contábeis">
+        <title>Tributos | Papis</title>
+        <link rel="stylesheet" href="../css/style.css">
+    </head>
+    <body>
+        <header class="topbar">
+            <a class="brand" href="Index.html">TRABALHO DO <span>PAPIS</span></a>
+            <div class="user-tools">
+                <small>Bem-vindo, <b data-user>usuário</b></small><button onclick="logout()">Sair</button>
+            </div>
+        </header>
+        <nav class="nav">
+            <a href="Index.html">Início</a>
+            <a href="Apresentacao.html">Apresentação</a>
+            <a href="Documentos.html">Documentos</a>
+            <a href="Contratos.html">Contratos</a>
+            <a href="Folha_de_pagamento.html">Folha de pagamento</a>
+            <a href="Tributos.html">Tributos</a>
+            <a href="Pareceres.html">Pareceres</a>
+        </nav>
+        <main class="container">
+            <section class="page-head">
+                <h1>Tributos</h1>
+                <p>Cadastro de tributos e simulação aritmética simples com base de cálculo e alíquota informadas.</p>
+            </section>
+            <section class="panel">
+                <h2>Cadastrar tributo</h2>
+                <form id="tributoForm" class="form-grid">
+                    <div class="field">
+                        <label>Nome *</label>
+                        <input id="trNome" required>
+                    </div>
+                    <div class="field">
+                        <label>Alíquota (%) *</label>
+                        <input id="trAliquota" type="number" min="0" step="0.0001" required>
+                    </div>
+                    <div class="field full">
+                        <label>Descrição *</label>
+                        <input id="trDesc" required>
+                    </div>
+                    <div class="field full">
+                        <button class="button">Salvar tributo</button>
+                    </div>
+                </form>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Nome</th>
+                                <th>Descrição</th>
+                                <th>Alíquota</th>
+                                <th>Ação</th>
+                            </tr>
+                        </thead>
+                        <tbody data-table="tributos"></tbody>
+                    </table>
+                </div>
+            </section>
+            <section class="panel">
+                <h2>Simular cálculo</h2>
+                <form id="calcForm" class="form-grid">
+                    <div class="field">
+                        <label>Tributo *</label>
+                        <input id="calcTributo" required placeholder="Nome do tributo">
+                    </div>
+                    <div class="field">
+                        <label>Data do cálculo *</label>
+                        <input id="calcData" type="date" required>
+                    </div>
+                    <div class="field">
+                        <label>Base de cálculo (R$) *</label>
+                        <input id="calcBase" type="number" min="0" step="0.01" required>
+                    </div>
+                    <div class="field">
+                        <label>Alíquota (%) *</label>
+                        <input id="calcAliq" type="number" min="0" step="0.0001" required>
+                    </div>
+                    <div class="field full">
+                        <button class="button">Calcular e registrar</button>
+                    </div>
+                </form>
+                <p>Resultado: <span id="calcResult" class="result">—</span></p>
+                <p class="muted">Fórmula demonstrativa: valor calculado = base de cálculo × alíquota ÷ 100. A aplicação de legislação, deduções, limites e regras específicas deve ser verificada pelo profissional responsável.</p>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Tributo</th>
+                                <th>Base</th>
+                                <th>Alíquota</th>
+                                <th>Valor calculado</th>
+                                <th>Data</th>
+                                <th>Ação</th>
+                            </tr>
+                        </thead>
+                        <tbody data-table="calculos"></tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">Trabalho do Papis · Projeto acadêmico em desenvolvimento</footer>
+        <script src="../js/app.js"></script>
+    </body>
+    </html>

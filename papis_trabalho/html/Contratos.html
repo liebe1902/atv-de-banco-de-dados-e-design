@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta name="description" content="Sistema de apoio às atividades contábeis">
+        <title>Contratos | Papis</title><link rel="stylesheet" href="../css/style.css">
+    </head>
+    <body>
+
+        <header class="topbar">
+            <a class="brand" href="Index.html">TRABALHO DO <span>PAPIS</span></a>
+            <div class="user-tools">
+                <small>Bem-vindo, <b data-user>usuário</b></small>
+                <button onclick="logout()">Sair</button>
+            </div>
+        </header>
+        
+        <nav class="nav">
+            <a href="Index.html">Início</a>
+            <a href="Apresentacao.html">Apresentação</a>
+            <a href="Documentos.html">Documentos</a>
+            <a href="Contratos.html">Contratos</a>
+            <a href="Folha_de_pagamento.html">Folha de pagamento</a>
+            <a href="Tributos.html">Tributos</a>
+            <a href="Pareceres.html">Pareceres</a>
+        </nav>
+
+        <main class="container">
+
+            <section class="page-head">
+                <h1>Contratos</h1>
+                <p>Cadastro e acompanhamento básico de contratos administrativos, conforme os atributos do modelo conceitual.</p>
+            </section>
+
+            <section class="panel">
+                <h2>Novo contrato</h2>
+                <form id="contratoForm" class="form-grid">
+                <div class="field">
+                    <label>Número *</label>
+                    <input id="ctNumero" required>
+                </div>
+                <div class="field">
+                    <label>Empresa *</label>
+                    <input id="ctEmpresa" required>
+                </div>
+                <div class="field"><label>Valor (R$) *</label>
+                    <input id="ctValor" type="number" min="0" step="0.01" required>
+                </div>
+                <div class="field"><label>Data inicial *</label>
+                                <input id="ctInicio" type="date" required>
+                </div>
+                <div class="field"><label>Data final *</label>
+                                    <input id="ctFim" type="date" required></div>
+                <div class="field full"><button class="button">Salvar contrato</button></div>
+                </form>
+            </section>
+
+            <section class="panel">
+                <h2>Contratos cadastrados</h2>
+                <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                        <th>Número</th>
+                        <th>Empresa</th>
+                        <th>Valor</th>
+                        <th>Início</th>
+                        <th>Fim</th>
+                        <th>Ação</th>
+                        </tr>
+                    </thead>
+                <tbody data-table="contratos"></tbody>
+                </table>
+                </div>
+            </section>
+
+            </main>
+            
+            <footer class="footer">Trabalho do Papis · Projeto acadêmico em desenvolvimento</footer>
+            <script src="../js/app.js"></script>
+    </body>
+</html>
